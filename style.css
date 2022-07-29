@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #fff;
+
+}
+h1,h2{
+    font-family: 'Albert Sans';
+    font-weight: 700;
+    text-align: center;
+}
+h1{
+    font-size: 54px;
+}
+h2{
+    font-size: 32px;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #46494C;
+}
+.logo{
+    width: 180px;
+    display: block;
+    padding-left: 10px;
+}
+.nav-list{
+    display: flex;
+    gap: 35px;
+}
+.nav-itens a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #fff;
+    padding: 13px 8px;
+}
+.log-in{
+    display: flex;
+    gap: 25px;
+    margin-right: 40px;
+}
+.nav-itens a:hover{
+    background-color: #4C5C68;
+}
+.welcome-section{
+    display: block;
+    height: 65vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("imgs/Background-image.jpg");
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-content: flex-end;
+    gap: 10px;
+}
+.text-propose{
+    display: block;
+    
+}
+.propose{
+    display: block;
+    margin: 0 110px 80px 120px;
+}
+#btn{
+    display: flex;
+    text-align: center;
+    margin: 3px 0 0 321px;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+}
+#email{
+    padding: 5px;
+}
+#mensage{
+    padding: 5px;
+}
+input:focus{
+    outline: none;
+}
+#btn:hover{
+    transition: 525ms;
+    background-color: #c5c3c6;
+}
+#btn-mobile{
+    display: none;
+}
+@media (max-width: 935px) {
+    .nav-list a{
+        font-size: 14px;
+    }
+    .log-in a{
+        font-size: 14px;
+        
+    }
+    .nav-list{
+        gap: 20px;
+    }
+    .log-in{
+        gap: 30px;
+        margin-right: 10px;
+    }
+}
+@media (max-width:767px) {
+    .nav-list a{
+        font-size: 13px;
+    }
+    .nav-list {
+        gap: 15px;
+    }
+    .log-in a{
+        font-size: 13px;
+    }
+    .log-in{
+        gap: 30px;
+        margin-right: 10px;
+    }
+}
+@media (max-width: 725px) {
+    .nav-list a{
+        font-size: 13px;
+    }
+    .nav-list{
+        gap: 15px;
+    }
+}
+@media (max-width:695px) {
+    #btn-mobile{
+        display: block;
+        margin-right: 1rem;
+    }
+    .nav-list{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 43px;
+        right: 0px;
+        visibility: hidden;
+        transition: .6s;
+        height: 0px;
+        overflow-y: hidden;
+        background: #46494C;
+    }
+    #nav.active .nav-list{    
+        height: calc(28.48vh - 43px);
+        overflow-y: auto;
+        visibility: visible;
+    }
+    .nav-list a{
+        padding: .8px 0;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+        
+    }
+    #btn-mobile{
+        display: flex;
+        padding: 7px 12px;
+        font-size: 18px;
+        color: #fff;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 35px;
+    }
+    .hamburger{
+        border-top: 2px solid;
+        width: 20px;
+    }
+    .hamburger::after, .hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        transition: .5s;
+        position: relative;
+        margin-top: 5px;
+    }
+    #nav.active .hamburger{
+        border-top-color: transparent;
+    }
+    #nav.active .hamburger::before{
+        transform: rotate(135deg);
+    }
+    #nav.active .hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+@media (max-width:600px) {
+    #btn{
+        display: none;
+    }
+    #email{
+        display: none;
+    }
+    #mensage{
+        display: none;
+    }
+    .text-propose{
+        display: none;
+    }
+}
