@@ -218,7 +218,7 @@ input:focus{
         top: -7px;
     }
 }
-@media (max-width:600px) {
+@media (max-width:620px) {
     #btn{
         display: none;
     }
@@ -231,4 +231,21 @@ input:focus{
     .text-propose{
         display: none;
     }
+}
+.about-us{
+    display: grid;
+    color: black;
+    grid-template-columns:  auto auto auto auto;
+    font-family: Verdana;
+}
+.about-us > h3{
+    font-size: 30px;
+    margin: 30px 10px;
+    align-content: center;
+}
+.about-us > p{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-right: 10px;
+    text-align: justify;
 }
