@@ -22,7 +22,13 @@ h1{
 h2{
     font-size: 32px;
 }
-
+img{
+    display: block;
+    width: 100%;
+}
+textarea{
+    resize: none;
+}
 ul{
     list-style: none;
 }
@@ -248,4 +254,76 @@ input:focus{
     margin-top: 30px;
     margin-right: 10px;
     text-align: justify;
+}
+.servicos{
+    text-align: center;
+    padding: 100px 30px;
+    color: black;
+}
+.serv-header{
+    max-width: 640px;
+    font-size: 50px;
+    margin: 0 auto 50px auto;
+    border-bottom: 1px solid black;
+}
+.serv-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.serv-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.serv-title{
+    font-size: 20px;
+}
+.contato{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(640px,1fr));
+    grid-gap: 10px;
+    margin: 0 auto;
+    background-color: #4c5c68;
+    height: 100%;
+}
+.informacao {
+    color: #000;
+    margin: 55px auto;
+    padding-top: 10px;
+    padding-left: 250px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.informacao > h3{
+    font-size: 45px;
+    padding: 5px 0;
+}
+.informacao > h4{
+    font-size: 35px;
+    padding: 5px 0;
+}
+.informacao > p{
+    font-size: 19px;
+}
+.formulario{
+    margin: 55px auto;
+    font-size: 18px;
+    color: #000;
+}
+#btn-sub{
+    padding: 7px;
+    align-items: flex-end;   
+    text-align: end;
+}
+.rup{
+    text-align: center;
+    color: #000;
+    font-size: 19px;
+}
+.rup a{
+    color: #000;
 }
